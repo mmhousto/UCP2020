@@ -25300,7 +25300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1770040775469074446, guid: 26d4098b50c1c94478258227964e5c55, type: 3}
       propertyPath: m_UpdateMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1770040775469074446, guid: 26d4098b50c1c94478258227964e5c55, type: 3}
       propertyPath: m_ApplyRootMotion

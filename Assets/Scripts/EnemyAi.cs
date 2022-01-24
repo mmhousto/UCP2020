@@ -23,9 +23,11 @@ public class EnemyAi : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        state = State.Patroling;
+        state = State.Idle;
         ai = GetComponent<NavMeshAgent>();
         currentWaypoint = 0;
+
+        Invoke(nameof(StartPatrol), 5f);
     }
 
     // Update is called once per frame
@@ -97,6 +99,12 @@ public class EnemyAi : MonoBehaviour
             }
         }
 
+    }
+
+
+    private void StartPatrol()
+    {
+        state = State.Patroling;
     }
 
 
