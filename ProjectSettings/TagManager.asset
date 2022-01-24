@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - HandRaise
+  - Waypoint
   layers:
   - Default
   - TransparentFX
