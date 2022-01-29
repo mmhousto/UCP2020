@@ -10,6 +10,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool interacting;
+		public bool dropping;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -42,7 +44,19 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-	// old input sys if we do decide to have it (most likely wont)...
+
+		public void OnDrop(InputValue value)
+		{
+			DropInput(value.isPressed);
+			InteractInput(false);
+		}
+
+		public void OnInteract(InputValue value)
+		{
+			InteractInput(value.isPressed);
+			DropInput(false);
+		}
+		// old input sys if we do decide to have it (most likely wont)...
 
 
 
@@ -64,6 +78,16 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void DropInput(bool newState)
+		{
+			dropping = newState;
+		}
+
+		public void InteractInput(bool newState)
+		{
+			interacting = newState;
 		}
 
 #if !UNITY_IOS || !UNITY_ANDROID
