@@ -15,6 +15,7 @@ public class RigManager : MonoBehaviour
         if (other.CompareTag("HandRaise") && !IsInvoking())
         {
             StartCoroutine(ChangeSpeed(0f, 1f, 1f));
+            RenderSettings.ambientLight = Color.red;
         }
     }
 
@@ -23,6 +24,7 @@ public class RigManager : MonoBehaviour
         if (other.CompareTag("HandRaise") && !IsInvoking())
         {
             StartCoroutine(ChangeSpeed(1f, 0f, 1f));
+            RenderSettings.ambientLight = Color.green;
         }
     }
 
